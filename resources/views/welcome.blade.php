@@ -30,12 +30,12 @@
             <a href="#" class="d_block banner wrapper r_corners type_2 relative">
                 <img src="images/banner_img_2.png" alt="">
                 <span class="banner_caption d_block vc_child t_align_c w_sm_auto">
-									<span class="d_inline_middle">
-										<span class="d_block scheme_color banner_title type_2 m_bottom_0 m_mxs_bottom_5"><b>-50%</b></span>
-										<span class="d_block divider_type_2 centered_db m_bottom_0 d_sm_none"></span>
-										<span class="d_block color_light tt_uppercase m_bottom_15 m_md_bottom_5 d_mxs_none">On All<br><b>Sunglasses</b></span>
-										<span class="button_type_6 bg_dark_color tt_uppercase r_corners color_light d_inline_b tr_all_hover box_s_none f_size_ex_large">Shop Now!</span>
-									</span>
+                    <span class="d_inline_middle">
+                        <span class="d_block scheme_color banner_title type_2 m_bottom_0 m_mxs_bottom_5"><b>-50%</b></span>
+                        <span class="d_block divider_type_2 centered_db m_bottom_0 d_sm_none"></span>
+                        <span class="d_block color_light tt_uppercase m_bottom_15 m_md_bottom_5 d_mxs_none">On All<br><b>Sunglasses</b></span>
+                        <span class="button_type_6 bg_dark_color tt_uppercase r_corners color_light d_inline_b tr_all_hover box_s_none f_size_ex_large">Shop Now!</span>
+                    </span>
 								</span>
             </a>
         </div>

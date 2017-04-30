@@ -4,19 +4,20 @@ namespace App\Repositories\Models;
 
 use Conner\Tagging\Taggable;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Gloudemans\Shoppingcart\Contracts\Buyable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
-class Product extends Model implements Transformable
+class Product extends Model implements Transformable,Buyable
 {
     use TransformableTrait,SoftDeletes,Taggable,Sluggable;
 
     protected $fillable = [
         'name',
         'description',
-        'sku',
+        'code',
         'price',
 
     ];
@@ -38,5 +39,35 @@ class Product extends Model implements Transformable
                 'source' => 'name'
             ]
         ];
+    }
+
+    /**
+     * Get the identifier of the Buyable item.
+     *
+     * @return int|string
+     */
+    public function getBuyableIdentifier($options = null)
+    {
+        return $this->id;
+    }
+
+    /**
+     * Get the description or title of the Buyable item.
+     *
+     * @return string
+     */
+    public function getBuyableDescription($options = null)
+    {
+        return $this->description;
+    }
+
+    /**
+     * Get the price of the Buyable item.
+     *
+     * @return float
+     */
+    public function getBuyablePrice($options = null)
+    {
+        return $this->price;
     }
 }

@@ -15,7 +15,8 @@ class CreateAttributesTable extends Migration
 	{
 		Schema::create('attributes', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
+            $table->string('name')->unique();
+            $table->string('slug');
             $table->timestamps();
 		});
 
@@ -23,8 +24,7 @@ class CreateAttributesTable extends Migration
 		Schema::create('attribute_product',function (Blueprint $table){
 		   $table->integer('attribute_id')->unsigned()->index();
 		   $table->integer('product_id')->unsigned()->index();
-		   $table->foreign('attribute_id')->references('id')->on('attributes')
-           ->onDelete('cascade');
+		   $table->foreign('attribute_id')->references('id')->on('attributes');
 		   $table->foreign('product_id')->references('id')->on('products');
         });
 	}
@@ -36,6 +36,7 @@ class CreateAttributesTable extends Migration
 	 */
 	public function down()
 	{
+		Schema::drop('attribute_product');
 		Schema::drop('attributes');
 	}
 

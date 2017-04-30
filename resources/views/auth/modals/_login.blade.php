@@ -2,15 +2,16 @@
     <section class="popup r_corners shadow">
         <button class="bg_tr color_dark tr_all_hover text_cs_hover close f_size_large"><i class="fa fa-times"></i></button>
         <h3 class="m_bottom_20 color_dark">Log In</h3>
-        <form>
+        <form action="{{url('/login')}}" method="post">
+            {{csrf_field()}}
             <ul>
                 <li class="m_bottom_15">
                     <label for="username" class="m_bottom_5 d_inline_b">Username</label><br>
-                    <input type="text" name="" id="username" class="r_corners full_width">
+                    <input type="text" name="email" id="username" class="r_corners full_width">
                 </li>
                 <li class="m_bottom_25">
                     <label for="password" class="m_bottom_5 d_inline_b">Password</label><br>
-                    <input type="password" name="" id="password" class="r_corners full_width">
+                    <input type="password" name="password" id="password" class="r_corners full_width">
                 </li>
                 <li class="m_bottom_15">
                     <input type="checkbox" class="d_none" id="checkbox_10"><label for="checkbox_10">Remember me</label>

@@ -1,44 +1,6 @@
 <header role="banner" class="type_5">
     <!--header top part-->
-    <section class="h_top_part">
-        <div class="container">
-            <div class="row clearfix">
-                <div class="col-lg-4 col-md-4 col-sm-5 t_xs_align_c">
-                    <ul class="d_inline_b horizontal_list clearfix f_size_small users_nav">
-                        <li><a href="#" class="default_t_color" data-popup="#login_popup">Log in</a></li>
-                        <li><a href="#" class="default_t_color">My Account</a></li>
-                        <li><a href="orders_list.html" class="default_t_color">List Orders</a></li>
-                        <li><a href="checkout.html" class="default_t_color">Checkout</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-2 t_align_c t_xs_align_c">
-                    <p class="f_size_small">Call us toll free: <b class="color_dark">(123) 456-7890</b></p>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-5 t_align_r t_xs_align_c">
-                    <ul class="horizontal_list clearfix d_inline_b t_align_l f_size_small site_settings type_2">
-                        <li class="container3d relative">
-                            <a role="button" href="#" class="color_dark" id="lang_button"><img class="d_inline_middle m_right_10" src="images/flag_en.jpg" alt="">English</a>
-                            <ul class="dropdown_list type_2 top_arrow color_light">
-                                <li><a href="#" class="tr_delay_hover color_light"><img class="d_inline_middle" src="images/flag_en.jpg" alt="">English</a></li>
-                                <li><a href="#" class="tr_delay_hover color_light"><img class="d_inline_middle" src="images/flag_fr.jpg" alt="">French</a></li>
-                                <li><a href="#" class="tr_delay_hover color_light"><img class="d_inline_middle" src="images/flag_g.jpg" alt="">German</a></li>
-                                <li><a href="#" class="tr_delay_hover color_light"><img class="d_inline_middle" src="images/flag_i.jpg" alt="">Italian</a></li>
-                                <li><a href="#" class="tr_delay_hover color_light"><img class="d_inline_middle" src="images/flag_s.jpg" alt="">Spanish</a></li>
-                            </ul>
-                        </li>
-                        <li class="m_left_20 relative container3d">
-                            <a role="button" href="#" class="color_dark" id="currency_button"><span class="scheme_color">$</span> US Dollar</a>
-                            <ul class="dropdown_list type_2 top_arrow color_light">
-                                <li><a href="#" class="tr_delay_hover color_light"><span class="scheme_color">$</span> US Dollar</a></li>
-                                <li><a href="#" class="tr_delay_hover color_light"><span class="scheme_color">&#8364;</span> Euro</a></li>
-                                <li><a href="#" class="tr_delay_hover color_light"><span class="scheme_color">&#163;</span> Pound</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    @include('layouts.partials.top_bar')
     <!--header bottom part-->
     <section class="h_bot_part">
         <div class="menu_wrap">
@@ -60,33 +22,44 @@
                             <!--main menu-->
                             <nav role="navigation" class="f_left f_xs_none d_xs_none m_right_35 m_md_right_30 m_sm_right_0">
                                 <ul class="horizontal_list main_menu type_2 clearfix">
-                                    <li class="current relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="index.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Home</b></a>
+                                    <li class="current relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="{{url('/')}}" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Home</b></a>
                                     </li>
-                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Women</b></a>
+                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0">
+                                        <a href="{{route('categories.show','women')}}" class="tr_delay_hover color_dark tt_uppercase r_corners">
+                                            <b>Women</b>
+                                        </a>
                                         <!--sub menu-->
                                         <div class="sub_menu_wrap top_arrow d_xs_none tr_all_hover clearfix r_corners w_xs_auto">
                                             <div class="f_left f_xs_none">
                                                 <b class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b">Dresses</b>
                                                 <ul class="sub_menu first">
                                                     <li><a class="color_dark tr_delay_hover" href="#">Evening Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Casual Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Party Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Maxi Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Midi Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Strapless Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Day Dresses</a></li>
+
                                                 </ul>
                                             </div>
+
                                             <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
-                                                <b class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b">Accessories</b>
+                                                <b class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b">Tops</b>
                                                 <ul class="sub_menu">
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Bags and Purces</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Belts</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Scarves</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Gloves</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Jewellery</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Sunglasses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Hair Accessories</a></li>
+                                                    <li><a class="color_dark tr_delay_hover" href="#">Evening Tops</a></li>
+                                                    <li><a class="color_dark tr_delay_hover" href="#">Long Sleeved</a></li>
+                                                    <li><a class="color_dark tr_delay_hover" href="#">Short Sleeved</a></li>
+                                                </ul>
+                                            </div>
+                                            <img src="images/woman_image_1.jpg" class="d_sm_none f_right m_bottom_10" alt="">
+                                        </div>
+                                    </li>
+                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0">
+                                        <a href="{{route('categories.show','men')}}" class="tr_delay_hover color_dark tt_uppercase r_corners">
+                                            <b>Men</b>
+                                        </a>
+                                        <!--sub menu-->
+                                        <div class="sub_menu_wrap top_arrow d_xs_none tr_all_hover clearfix r_corners w_xs_auto">
+                                            <div class="f_left f_xs_none">
+                                                <b class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b">Dresses</b>
+                                                <ul class="sub_menu first">
+                                                    <li><a class="color_dark tr_delay_hover" href="#">Evening Dresses</a></li>
+
                                                 </ul>
                                             </div>
                                             <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
@@ -94,66 +67,15 @@
                                                 <ul class="sub_menu">
                                                     <li><a class="color_dark tr_delay_hover" href="#">Evening Tops</a></li>
                                                     <li><a class="color_dark tr_delay_hover" href="#">Long Sleeved</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Short Sleeved</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Sleeveless</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Tanks</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Tunics</a></li>
                                                 </ul>
                                             </div>
                                             <img src="images/woman_image_1.jpg" class="d_sm_none f_right m_bottom_10" alt="">
                                         </div>
                                     </li>
-                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="category_grid.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Men</b></a>
-                                        <!--sub menu-->
-                                        <div class="sub_menu_wrap top_arrow d_xs_none tr_all_hover clearfix r_corners w_xs_auto">
-                                            <div class="f_left f_xs_none">
-                                                <b class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b">Dresses</b>
-                                                <ul class="sub_menu first">
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Evening Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Casual Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Party Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Maxi Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Midi Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Strapless Dresses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Day Dresses</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
-                                                <b class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b">Accessories</b>
-                                                <ul class="sub_menu">
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Bags and Purces</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Belts</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Scarves</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Gloves</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Jewellery</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Sunglasses</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Hair Accessories</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="f_left m_left_10 m_xs_left_0 f_xs_none">
-                                                <b class="color_dark m_left_20 m_bottom_5 m_top_5 d_inline_b">Tops</b>
-                                                <ul class="sub_menu">
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Evening Tops</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Long Sleeved</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Short Sleeved</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Sleeveless</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Tanks</a></li>
-                                                    <li><a class="color_dark tr_delay_hover" href="#">Tunics</a></li>
-                                                </ul>
-                                            </div>
-                                            <img src="images/woman_image_1.jpg" class="d_sm_none f_right m_bottom_10" alt="">
-                                        </div>
-                                    </li>
-                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="blog.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Blog</b></a>
-                                        <!--sub menu-->
-                                        <div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
-                                            <ul class="sub_menu">
-                                                <li><a class="color_dark tr_delay_hover" href="blog.html">Blog page</a></li>
-                                                <li><a class="color_dark tr_delay_hover" href="blog_post.html">Single Blog Post page</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="contact.html" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Contact</b></a></li>
+
+                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="{{route('categories.show','kids')}}" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Kids</b></a></li>
+
+                                    <li class="relative f_xs_none m_xs_bottom_5 m_left_10 m_xs_left_0"><a href="{{url('/contact')}}" class="tr_delay_hover color_dark tt_uppercase r_corners"><b>Contact</b></a></li>
                                 </ul>
                             </nav>
                             <button class="f_right search_button tr_all_hover f_xs_none d_xs_none">

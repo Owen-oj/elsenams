@@ -31,15 +31,15 @@
 @include('auth.modals._login')
 <button class="t_align_c r_corners type_2 tr_all_hover animate_ftl" id="go_to_top"><i class="fa fa-angle-up"></i></button>
 <!--scripts include-->
-<script src="js/jquery-2.1.0.min.js"></script>
-<script src="js/retina.js"></script>
-<script src="js/jquery.themepunch.plugins.min.js"></script>
-<script src="js/jquery.themepunch.revolution.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/owl.carousel.min.js"></script>
-<script src="js/jquery.tweet.min.js"></script>
-<script src="js/jquery.custom-scrollbar.js"></script>
-<script src="js/scripts.js"></script>
+<script src="{{asset('js/jquery-2.1.0.min.js')}}"></script>
+<script src="{{asset('js/retina.js')}}"></script>
+<script src="{{asset('js/jquery.themepunch.plugins.min.js')}}"></script>
+<script src="{{asset('js/jquery.themepunch.revolution.min.js')}}"></script>
+<script src="{{asset('js/waypoints.min.js')}}"></script>
+<script src="{{asset('js/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/jquery.tweet.min.js')}}"></script>
+<script src="{{asset('js/jquery.custom-scrollbar.js')}}"></script>
+<script src="{{asset('js/scripts.js')}}"></script>
 <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5306f8f674bfda4c"></script>
 </body>
 </html>

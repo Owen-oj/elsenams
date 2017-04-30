@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCategoriesTable extends Migration
+class CreateOrderItemsTable extends Migration
 {
 
 	/**
@@ -13,18 +13,12 @@ class CreateCategoriesTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('categories', function(Blueprint $table) {
+		Schema::create('order_items', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique()->index();
-            $table->string('slug');
-            $table->string('description')->nullable();
-            $table->integer('parent_id')->nullable();
+            $table->integer('order_id')->unsigned();
+            $table->integer('item_id')->unsigned();
             $table->timestamps();
 		});
-
-
-
-
 	}
 
 	/**
@@ -34,7 +28,7 @@ class CreateCategoriesTable extends Migration
 	 */
 	public function down()
 	{
-		Schema::drop('categories');
+		Schema::drop('order_items');
 	}
 
 }

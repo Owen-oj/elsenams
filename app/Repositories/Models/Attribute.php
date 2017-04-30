@@ -11,7 +11,7 @@ class Attribute extends Model implements Transformable
 {
     use TransformableTrait,Sluggable;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name','slug'];
 
     public function values()
     {

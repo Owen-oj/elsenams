@@ -14,6 +14,7 @@ class CreateShoppingcartTable extends Migration
         Schema::create('shoppingcart', function (Blueprint $table) {
             $table->string('identifier');
             $table->string('instance');
+            $table->integer('user_id')->unsigned();
             $table->longText('content');
             $table->nullableTimestamps();
             $table->primary(['identifier', 'instance']);

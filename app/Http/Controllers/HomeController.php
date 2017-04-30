@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth')->only('welcome');
     }
 
     /**
@@ -24,5 +24,19 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function contact()
+    {
+        return view('contact');
+    }
+
+
+    public function welcome()
+    {
+        return view('welcome');
     }
 }
