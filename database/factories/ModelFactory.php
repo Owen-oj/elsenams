@@ -31,3 +31,11 @@ $factory->define(App\Repositories\Models\Category::class, function (Faker\Genera
     ];
 });
 
+$factory->define(App\Repositories\Models\Role::class, function (Faker\Generator $faker) {
+
+
+    return [
+        'name' => $faker->unique()->randomElement(['admin','customer']),
+    ];
+});
+

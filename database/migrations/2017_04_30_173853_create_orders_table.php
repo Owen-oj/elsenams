@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->float('amount');
             $table->string('payment_method');
             $table->string('discount')->nullable();
+            $table->string('status');
             $table->timestamps();
 		});
 	}

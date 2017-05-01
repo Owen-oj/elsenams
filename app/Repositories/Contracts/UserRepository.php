@@ -10,5 +10,9 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  */
 interface UserRepository extends RepositoryInterface
 {
-    //
+    /**
+     * Get total customers
+     * @return mixed
+     */
+    public function totalCustomers();
 }

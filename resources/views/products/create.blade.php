@@ -1,0 +1,56 @@
+@extends('layouts.admin')
+
+@section('content')
+    <div class="col-md-8 col-md-offset-2">
+        <div class="panel panel-default">
+            <div class="panel-heading">Add New Product</div>
+            <div class="panel-body">
+            {!! Form::open(['action'=>'ProductsController@store','files'=>'true','method'=>'post','class'=>'form-horizontal']) !!}
+
+            <!--Name-->
+                <div class="form-group">
+                    {!! Form::label('name', 'Name',['class'=>'col-md-4 control-label']) !!}
+                    <div class="col-md-6">
+                        {!! Form::text('name',null, ['class' => 'form-control ','placeholder'=>'Name']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('plan_id', 'Plan ID',['class'=>'col-md-4 control-label']) !!}
+                    <div class="col-md-6">
+                        {!! Form::text('plan_id',null, ['class' => 'form-control ','placeholder'=>'Price']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('plan_id', 'Attributes',['class'=>'col-md-4 control-label']) !!}
+                    <div class="col-md-6">
+                        {!! Form::select('plan_id',[],null, ['class' => 'form-control ','placeholder'=>'Attributes']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('plan_id', 'Categories',['class'=>'col-md-4 control-label']) !!}
+                    <div class="col-md-6">
+                        {!! Form::select('plan_id',[],null, ['class' => 'form-control ','placeholder'=>'Categories']) !!}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('description', 'Description',['class'=>'col-md-4 control-label']) !!}
+                    <div class="col-md-6">
+                        {!! Form::textarea('description',null, ['class' => 'form-control ','placeholder'=>'description','rows'=>3]) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    {!! Form::label('image', 'Image',['class'=>'col-md-4 control-label']) !!}
+                    <div class="col-md-6">
+                        {!! Form::file('image',null, ['class' => 'form-control ']) !!}
+                    </div>
+                </div>
+
+                {!! Form::submit('Create',['class'=>'btn btn-primary btn-wide pull-right ' ])!!}
+
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+
+@endsection

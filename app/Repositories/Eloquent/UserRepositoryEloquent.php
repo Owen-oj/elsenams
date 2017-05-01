@@ -33,4 +33,15 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
+
+    /**
+     * Get total customers
+     * @return mixed
+     */
+    public function totalCustomers()
+    {
+        return $this->whereHas('roles',function ($query){
+            $query->where('name','customer');
+        })->all()->count();
+    }
 }

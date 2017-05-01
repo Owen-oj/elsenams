@@ -52,6 +52,11 @@ class CategoriesController extends Controller
         return view('categories.index', compact('categories'));
     }
 
+    public function create()
+    {
+        return view('categories.create');
+    }
+
     /**
      * Store a newly created resource in storage.
      *

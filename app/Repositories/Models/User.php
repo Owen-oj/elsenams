@@ -8,6 +8,8 @@ use Prettus\Repository\Traits\TransformableTrait;
 
 class User extends \App\User implements Transformable
 {
+    protected $table = 'users';
+
     use TransformableTrait;
 
 

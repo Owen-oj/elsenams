@@ -50,3 +50,18 @@ Route::get('/contact','HomeController@contact');
 |--------------------------------------------------------------------------
 */
 Route::resource('orders','OrdersController');
+
+/*
+|--------------------------------------------------------------------------
+| Admin routes
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
+   Route::get('dashboard','HomeController@dashboard');
+
+   Route::resource('products','ProductsController',['as'=>'admin']);
+
+    Route::resource('orders','OrdersController',['as'=>'admin']);
+
+    Route::resource('categories','CategoriesController',['as'=>'admin']);
+});
