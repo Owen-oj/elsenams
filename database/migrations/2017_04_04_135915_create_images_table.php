@@ -18,6 +18,7 @@ class CreateImagesTable extends Migration
             $table->string('icon_size');
             $table->string('card_size');
             $table->string('full_size');
+            $table->integer('product_id');
             $table->timestamps();
 		});
 	}

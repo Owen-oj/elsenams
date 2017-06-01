@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Repositories\Contracts\ImageRepository;
 use App\Repositories\Contracts\ProductRepository;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
 {
-    protected $products;
+    protected $products,$images;
 
-    public function __construct(ProductRepository $products)
+    public function __construct(ProductRepository $products,ImageRepository $images)
     {
         $this->products = $products;
+        $this->images = $images;
 
     }
     /**
@@ -23,12 +25,11 @@ class ProductsController extends Controller
     {
         $products = $this->products->paginate(16);
 
-        return view('products.index',compact('products'));
+        return view('admin.products.index',compact('products'));
     }
 
     /**
      * Show the form for creating a new resource.
-     *
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -44,7 +45,24 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = $this->products->create($request->all());
+
+        return redirect(route('upload',$product->id));
+    }
+
+
+    public function uploadForm($product_id)
+    {
+
+        return view('products.upload',compact('product_id'));
+    }
+
+
+    public function storeImages()
+    {
+        $image = $this->images->upload(request()->all());
+
+        return redirect()->back();
     }
 
     /**

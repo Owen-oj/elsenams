@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name')->unique();
             $table->string('slug');
+            $table->float('price');
             $table->string('product_code');
             $table->string('description');
             $table->timestamps();

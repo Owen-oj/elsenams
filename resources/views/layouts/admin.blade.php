@@ -22,6 +22,9 @@
     <link href="{{asset('admin/css/style.css')}}" rel="stylesheet">
     <link href="{{asset('admin/css/style-responsive.css')}}" rel="stylesheet" />
 
+    <link rel="stylesheet" href="{{asset('css/toastr.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/fileinput.min.css')}}">
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -67,7 +70,8 @@
 <script type="text/javascript" src="{{asset('admin/assets/data-tables/DT_bootstrap.js')}}"></script>
 
 <script class="include" type="text/javascript" src="{{asset('admin/js/jquery.dcjqaccordion.2.7.js')}}"></script>
-
+<script src="{{asset('js/fileinput.min.js')}}"></script>
+<script src="{{asset('js/toastr.min.js')}}"></script>
 <!--common script for all pages-->
 <script src="{{asset('admin/js/common-scripts.js')}}"></script>
 

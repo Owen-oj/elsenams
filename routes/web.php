@@ -59,6 +59,10 @@ Route::resource('orders','OrdersController');
 Route::group(['prefix'=>'admin','middleware'=>'auth'],function (){
    Route::get('dashboard','HomeController@dashboard');
 
+   Route::get('upload/{id}',['as'=>'upload','uses'=>'ProductsController@uploadForm']);
+
+   Route::post('upload-images',['as'=>'products.upload','uses'=>'ProductsController@storeImages']);
+
    Route::resource('products','ProductsController',['as'=>'admin']);
 
     Route::resource('orders','OrdersController',['as'=>'admin']);

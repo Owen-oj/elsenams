@@ -17,7 +17,7 @@ class Product extends Model implements Transformable,Buyable
     protected $fillable = [
         'name',
         'description',
-        'code',
+        'product_code',
         'price',
 
     ];

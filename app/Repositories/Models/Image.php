@@ -13,7 +13,8 @@ class Image extends Model implements Transformable
     protected $fillable = [
         'icon_size',
         'full_size',
-        'card_size'
+        'card_size',
+        'product_id'
     ];
 
 }

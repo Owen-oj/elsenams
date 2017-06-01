@@ -10,5 +10,5 @@ use Prettus\Repository\Contracts\RepositoryInterface;
  */
 interface ImageRepository extends RepositoryInterface
 {
-    //
+    public function upload($file);
 }

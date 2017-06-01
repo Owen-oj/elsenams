@@ -15,21 +15,15 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    {!! Form::label('plan_id', 'Plan ID',['class'=>'col-md-4 control-label']) !!}
+                    {!! Form::label('product_code', 'Product Code',['class'=>'col-md-4 control-label']) !!}
                     <div class="col-md-6">
-                        {!! Form::text('plan_id',null, ['class' => 'form-control ','placeholder'=>'Price']) !!}
+                        {!! Form::text('product_code',null, ['class' => 'form-control ','placeholder'=>'Attributes']) !!}
                     </div>
                 </div>
                 <div class="form-group">
-                    {!! Form::label('plan_id', 'Attributes',['class'=>'col-md-4 control-label']) !!}
+                    {!! Form::label('price', 'Price',['class'=>'col-md-4 control-label']) !!}
                     <div class="col-md-6">
-                        {!! Form::select('plan_id',[],null, ['class' => 'form-control ','placeholder'=>'Attributes']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    {!! Form::label('plan_id', 'Categories',['class'=>'col-md-4 control-label']) !!}
-                    <div class="col-md-6">
-                        {!! Form::select('plan_id',[],null, ['class' => 'form-control ','placeholder'=>'Categories']) !!}
+                        {!! Form::text('price',null, ['class' => 'form-control ','placeholder'=>'Categories']) !!}
                     </div>
                 </div>
 
